@@ -1,0 +1,785 @@
+/* Estilos Personalizados para Pedro García */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --dark-color: #343a40;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 100px 0;
+    margin-top: 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.profile-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.avatar-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.avatar-placeholder i {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.avatar-placeholder p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item span {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.contact-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: #f8f9fa;
+}
+
+/* Timeline para Educación */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    position: relative;
+    margin-left: 50%;
+    width: 45%;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    border-left: 4px solid #0056b3;
+}
+
+.timeline-header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #007bff;
+    transform: translateY(-50%);
+}
+
+.timeline-body {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 50%;
+    width: 45%;
+    margin-top: 5px;
+    border-left: 3px solid #007bff;
+}
+
+.time-label {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+.time-label span {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+    display: inline-block;
+}
+
+/* Puntos en la línea de tiempo */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: #007bff;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-left: -6px;
+    box-shadow: 0 0 0 3px #007bff;
+    z-index: 2;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons .ml-2 {
+        margin-left: 0 !important;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-header,
+    .timeline-body {
+        margin-left: 60px;
+        width: calc(100% - 80px);
+    }
+    
+    .timeline-header::after {
+        left: -10px;
+        border-right: 10px solid #007bff;
+        border-left: none;
+    }
+    
+    .avatar-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .avatar-placeholder i {
+        font-size: 4rem;
+    }
+}
+
+/* Estilos para el Carousel de Certificaciones */
+#certificacionesCarousel {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.certification-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    margin: 20px 0;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+}
+
+.institution-logo {
+    margin-bottom: 25px;
+}
+
+.institution-logo img {
+    max-height: 120px;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+}
+
+.certification-card h4 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.institution-name {
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.certification-date {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.certification-desc {
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Colores personalizados para badges */
+.badge-purple {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.badge-teal {
+    background-color: #20c997;
+    color: white;
+}
+
+/* Carousel controls personalizados */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: #0056b3;
+    opacity: 1;
+}
+
+.carousel-indicators {
+    bottom: -60px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    border: 2px solid transparent;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Contador de certificaciones */
+.certification-counter {
+    background: #f8f9fa;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: inline-block;
+    border: 2px solid #e9ecef;
+}
+
+.certification-counter h5 {
+    color: #495057;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .certification-card {
+        padding: 30px 20px;
+        min-height: 350px;
+        margin: 10px;
+    }
+    
+    .certification-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .institution-logo img {
+        max-height: 80px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+    
+    .carousel-indicators {
+        bottom: -50px;
+    }
+}
+/* Estilos para el Carousel de Certificaciones */
+#certificacionesCarousel {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.certification-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    margin: 20px 0;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+}
+
+.institution-logo {
+    margin-bottom: 25px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institution-logo img {
+    max-height: 100%;
+    max-width: 200px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+}
+
+.certification-card:hover .institution-logo img {
+    filter: grayscale(0%);
+}
+
+.certification-card h4 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.institution-name {
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.certification-date, .certification-hours {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.certification-desc {
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Colores personalizados para badges */
+.badge-purple {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.badge-teal {
+    background-color: #20c997;
+    color: white;
+}
+
+/* Carousel controls personalizados */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: #0056b3;
+    opacity: 1;
+}
+
+.carousel-indicators {
+    bottom: -60px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    border: 2px solid transparent;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Contador de certificaciones */
+.certification-counter {
+    background: #f8f9fa;
+    padding: 15px 30px;
+    border-radius: 25px;
+    display: inline-block;
+    border: 2px solid #e9ecef;
+}
+
+.certification-counter h5 {
+    color: #495057;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .certification-card {
+        padding: 30px 20px;
+        min-height: 350px;
+        margin: 10px;
+    }
+    
+    .certification-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .institution-logo {
+        height: 80px;
+    }
+    
+    .institution-logo img {
+        max-width: 150px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+    
+    .carousel-indicators {
+        bottom: -50px;
+    }
+}
+
+/* Ajustes específicos para logos */
+.institution-logo img[src*="uce-logo"],
+.institution-logo img[src*="infotep-logo"],
+.institution-logo img[src*="itla-logo"],
+.institution-logo img[src*="minerd-logo"] {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para foto de perfil real */
+.profile-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile-image-real {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #e100ff 0%, #0000f7 100%);
+}
+
+.profile-image-real:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecto de brillo al hover */
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover::before {
+    opacity: 0.3;
+}
+
+/* Responsive para foto */
+@media (max-width: 768px) {
+    .profile-image-real {
+        max-width: 280px;
+        height: 280px;
+    }
+    
+    .profile-image-container {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image-real {
+        max-width: 220px;
+        height: 220px;
+    }
+}
+
+/* Eliminar los estilos del avatar placeholder anterior */
+.avatar-placeholder {
+    display: none;
+}
+
+/* Mejoras visuales para AOS */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Smooth scrolling mejorado */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus styles para accesibilidad */
+a:focus, button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Mejoras de rendimiento */
+.profile-image-real, .institution-logo img {
+    will-change: transform;
+}
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+/* Botón Volver Arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
